@@ -15,6 +15,8 @@ def sendMail(fromEmail, toEmail , subject, message):
   msg['To']= toEmail
   msg['subject']= subject
   msg.attach(MIMEText(message))
+  
+  # smtp_ssl for the godaddy smtp server
   mailserver= smtplib.SMTP_SSL('smtpout.secureserver.net',465)
   mailserver.ehlo()
   mailserver.login(os.environ['email'], os.environ['password'])
