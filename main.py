@@ -2,6 +2,8 @@ import smtplib
 import os
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
+import time
+
 print('hello world')
 # this can be read from csv 
 emaillist = ['shaikhls2421@gmail.com', 'shaikh.1u64@gmail.com ']
@@ -30,6 +32,7 @@ for email in emaillist:
   toEmail = email
   subject= 'da ta da t a tara '
   message= "let me take you dancing"
-  sendMail(fromMail, toEmail, subject, message)
+  # sendMail(fromMail, toEmail, subject, message)
 
-  print(f'{email}')
+  print(f'Mail sent to {email}')
+  time.sleep(4)
